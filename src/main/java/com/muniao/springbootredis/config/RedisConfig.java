@@ -14,6 +14,7 @@ public class RedisConfig
     @Value("${spring.redis.host}")
     private String host;
 
+
     @Value("${spring.redis.port}")
     private int port;
 
@@ -44,5 +45,6 @@ public class RedisConfig
         JedisPool jedisPool = new JedisPool(jpc, host, port, timeout, null);
         return jedisPool;
     }
+
 
 }
